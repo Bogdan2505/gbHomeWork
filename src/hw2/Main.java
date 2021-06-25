@@ -22,7 +22,7 @@ public class Main {
         System.out.println(checkPositiveWrite(-2));
         System.out.println(checkPositive(10));
         writeStr("hi", 5);
-        System.out.println(vesocosYear(2021));
+        System.out.println(vesocosYear(400));
     }
 
     /**
