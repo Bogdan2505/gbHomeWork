@@ -14,10 +14,10 @@ public class Main {
         System.out.println(Arrays.toString(mas));
         maxMin();
 
-        int[] arr = {2, 2, 2, 1, 2, 2, 10, 1};
+        int[] arr = {1, 14, 1, 2, 1, 6, 7};
         System.out.println(bathPathEquals(arr));
 
-        foo(new int[]{1, 2, 3, 4, 5, 6, 7}, -2);
+        foo(new int[]{1, 2, 3, 4, 5, 6, 7}, 2);
     }
 
     /**
