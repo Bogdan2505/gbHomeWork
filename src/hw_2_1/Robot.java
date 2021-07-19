@@ -2,29 +2,23 @@ package hw_2_1;
 
 public class Robot implements RunJump{
 
-    private int run;
-    private int jump;
+    private int runLength;
+    private int jumpHigh;
 
-    public Robot(int run, int jump){
-        this.run = run;
-        this.jump = jump;
+    public Robot(int runLength, int jumpHigh){
+        this.runLength = runLength;
+        this.jumpHigh = jumpHigh;
     }
 
     @Override
-    public void jump() {
-        System.out.println("robot jump "+ jump);
+    public int jump() {
+        return jumpHigh;
     }
 
     @Override
-    public void run() {
-        System.out.println("robot run "  + run);
+    public int run() {
+        return runLength;
     }
 
-    public int getJump() {
-        return jump;
-    }
 
-    public int getRun() {
-        return run;
-    }
 }

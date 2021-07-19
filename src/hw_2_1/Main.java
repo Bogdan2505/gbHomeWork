@@ -39,24 +39,14 @@ public class Main {
         };
 
         for (int i = 0; i < runJump.length; i++) {
-            runJump[i].jump();
-            runJump[i].run();
+            System.out.println("may jump " + runJump[i].jump());
+            System.out.println("may run " + runJump[i].run());
             for (int j = 0; j < obstacles.length; j++) {
-               if ( obstacles[j].getJump() != 0 ){
-                   obstacles[j].can(runJump[i].getJump());
-
-                   if (!obstacles[j].getCanDoIt()){
-                       break;
-                   }
-
-               }else {
-                    obstacles[j].can(runJump[i].getRun());
-
-                   if (!obstacles[j].getCanDoIt()){
-                       break;
-                   }
-
-                }
+               if (obstacles[j].canDoIt(runJump[i])){
+                   System.out.println("can");
+               }else{
+                   break;
+               }
 
             }
         }

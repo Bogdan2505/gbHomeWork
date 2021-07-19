@@ -2,12 +2,9 @@ package hw_2_1;
 
 public interface RunJump {
 
-    void jump();
+    int jump();
 
-    void run();
+    int  run();
 
-    int getRun();
-
-    int getJump();
 
 }

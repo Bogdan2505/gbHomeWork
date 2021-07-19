@@ -3,34 +3,18 @@ package hw_2_1;
 public class Wall implements Obstacles{
 
 
-    private int jump;
-    boolean canDoit;
+    private final int height;
 
-    public Wall( int jump){
-        this.jump = jump;
-    }
-
-    public int getJump() {
-        return jump;
+    public Wall(int height) {
+        this.height = height;
     }
 
     @Override
-    public boolean getCanDoIt() {
-        return canDoit;
-    }
-
-    @Override
-    public void can( int  may) {
-        if ( getJump() > may){
-            System.out.println("can not jump ");
-        }else {
-            System.out.println("can jump ");
-            canDoit = true;
+    public boolean canDoIt (RunJump runJump) {
+        if (runJump.jump() >= height ){
+            System.out.println("can jump");
+            return true;
         }
-    }
-
-    @Override
-    public int getRun() {
-        return 0;
+        return false;
     }
 }

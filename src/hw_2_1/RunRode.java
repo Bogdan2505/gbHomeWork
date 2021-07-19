@@ -2,34 +2,18 @@ package hw_2_1;
 
 public class RunRode implements Obstacles {
 
-    private int run;
-    private boolean canDoIt;
+    private final int length;
 
-    public RunRode(int run){
-        this.run = run;
-    }
-
-    public int getRun() {
-        return run;
+    public RunRode(int height) {
+        this.length = height;
     }
 
     @Override
-    public int getJump() {
-        return 0;
-    }
-
-    @Override
-    public boolean getCanDoIt() {
-        return canDoIt;
-    }
-
-    @Override
-    public void can( int  may) {
-        if ( getRun() > may){
-            System.out.println("can not run ");
-        }else {
-            System.out.println("can run ");
-            canDoIt = true;
+    public boolean canDoIt(RunJump runJump) {
+        if ( runJump.run() >= length){
+            System.out.println("can run");
+            return true;
         }
+        return false;
     }
 }
