@@ -23,6 +23,7 @@ public class Client {
                         System.out.println("Client disconnected");
                         break;
                     }
+                    System.out.println(str);
                 }
             } catch (IOException e) {
                 e.printStackTrace();
